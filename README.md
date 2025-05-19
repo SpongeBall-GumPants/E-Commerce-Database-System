@@ -45,14 +45,11 @@ Rather than jumping straight to tables and queries, we followed a disciplined wo
 For each platform, we created an independent conceptual model:
 
 - **Amazon ER**  
-  - Emphasizes FBA warehouses, prime shipping, order aging.  
-  - ![[AMAZON 1.png]]
+  ![Amazon ER](Diyagramlar/AMAZON.png)
 - **Hepsiburada ER**  
-  - Highlights wallet vs. card payment flows, premium tiers, point systems.  
-  - ![[HEPSİBURADA.png]]
+  ![Hepsiburada ER](Diyagramlar/HEPSİBURADA.png)
 - **Trendyol ER**  
-  - Introduces “influencer” referrals, collections, and elite status.
-  - ![[TRENDYOL.png]]
+  ![Trendyol ER](Diyagramlar/TRENDYOL.png)
 
 Each diagram uses three overlaid “layers” (entities, relationships, specializations) to keep complexity manageable.
 
@@ -61,7 +58,7 @@ Each diagram uses three overlaid “layers” (entities, relationships, speciali
 ## Step 3: Layered ER Comparison
 
 - **Photoshop File (Blueprint for ER diagrams):**  
-- ![[Pasted image 20250520004743.png]]
+  ![Layered ER Comparison](Diyagramlar/Blueprint.png)
 - **Goal:** Visually align the three ERDs in layers to spot:  
   - Common entities (User, Customer, Order, Product, Shop)  
   - Divergent relationship patterns (e.g., “Follows” vs. “Refers,” “Lists” vs. “Collections”)  
@@ -74,7 +71,7 @@ By toggling layers on and off, we traced each platform’s unique contribution t
 ## Step 4: Consolidated ER Diagram
 
 - **Artifact:** 
-- ![[Z BİRLEŞMİŞ 1.png]]
+  ![Consolidated ER](Diyagramlar/Z%20BİRLEŞMİŞ.png)
 - **Outcome:** A single, harmonized ER that incorporates every entity, relationship, and specialization discovered in Steps 2–3.  
 - **Highlights:**  
   - Unified customer hierarchy (standard → premium → influencer → affiliate)  
@@ -85,7 +82,7 @@ By toggling layers on and off, we traced each platform’s unique contribution t
 
 ## Step 5: ER→RDB Mapping
 
-- **Document:** ![[ER TO RDB 1.docx]]
+  [ER → RDB Mapping (DOCX)](ER%20TO%20RDB.docx)
 - **Conversion Strategy:**  
   1. **Entities:** each becomes a table with a surrogate primary key.  
   2. **1:N & M:N relationships:** handled via foreign keys and association tables.  
@@ -99,9 +96,9 @@ This mapping ensures referential integrity and prepares the schema for PostgreSQ
 
 ## Step 6: Schema Implementation
 
-- **DDL Script:** ![[ECOMMCREATETABLESTATEMENTS.sql]]
+- **DDL Script:**   [Create Tables & Constraints (SQL)](ECOMMCREATETABLESTATEMENTS.sql)
   - Defines tables, primary/foreign keys, uniqueness and check constraints.  
-- **Sample Data Dump:** ![[ECOMMdumpfile.sql]]
+- **Sample Data Dump:**   [Load Sample Data (SQL)](ECOMMdumpfile.sql)
   - Contains structured sample inserts to exercise every table and relationship.  
 ---
 
