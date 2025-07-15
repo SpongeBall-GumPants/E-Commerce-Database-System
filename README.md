@@ -114,7 +114,7 @@ This mapping ensures referential integrity and prepares the schema for PostgreSQ
 
 1. Clone the repository:
     
-    `git clone https://github.com/yourusername/E-Commerce-Database-System.git cd E-Commerce-Database-System`
+    `git clone https://github.com/SpongeBall-GumPants/E-Commerce-Database-System.git cd E-Commerce-Database-System`
     
 2. Set up PostgreSQL Database:
     
